@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>B Mohammed Idrees Abdulla | Portfolio</title>
-  <!-- Fonts: Outfit for headings, Inter for body -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
-    rel="stylesheet">
-  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v5/font/simple-icons.min.css">
+
   <style>
-    /* CSS Variables for theming */
     :root {
       --bg-color: #050a15;
       --text-main: #ffffff;
       --text-muted: #94a3b8;
       --accent-1: #3b82f6;
       --accent-2: #8b5cf6;
-      --accent-3: #10b981;
       --glass-bg: rgba(255, 255, 255, 0.03);
       --glass-border: rgba(255, 255, 255, 0.08);
       --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
@@ -40,22 +36,17 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: var(--bg-color);
+      background: var(--bg-color);
       color: var(--text-main);
       overflow-x: hidden;
       line-height: 1.6;
     }
 
-    h1,
-    h2,
-    h3,
-    h4 {
+    h1, h2, h3, h4 {
       font-family: 'Outfit', sans-serif;
     }
 
-    /* Custom Cursor */
-    .cursor-dot,
-    .cursor-outline {
+    .cursor-dot, .cursor-outline {
       position: fixed;
       top: 0;
       left: 0;
@@ -78,7 +69,6 @@
       transition: width 0.2s, height 0.2s, background-color 0.2s;
     }
 
-    /* Background Canvas */
     #bg-canvas {
       position: fixed;
       top: 0;
@@ -88,7 +78,6 @@
       z-index: -1;
     }
 
-    /* Glowing Blobs */
     .blob {
       position: absolute;
       filter: blur(90px);
@@ -103,7 +92,6 @@
       width: 50vw;
       height: 50vw;
       background: rgba(59, 130, 246, 0.15);
-      animation-delay: 0s;
     }
 
     .blob-2 {
@@ -116,16 +104,10 @@
     }
 
     @keyframes float {
-      0% {
-        transform: translateY(0) scale(1);
-      }
-
-      100% {
-        transform: translateY(-50px) scale(1.1);
-      }
+      0% { transform: translateY(0) scale(1); }
+      100% { transform: translateY(-50px) scale(1.1); }
     }
 
-    /* Navbar */
     nav {
       position: fixed;
       top: 0;
@@ -175,9 +157,7 @@
       position: relative;
     }
 
-    .nav-links a:hover {
-      color: white;
-    }
+    .nav-links a:hover { color: white; }
 
     .nav-links a::after {
       content: '';
@@ -190,11 +170,8 @@
       transition: width 0.3s ease;
     }
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+    .nav-links a:hover::after { width: 100%; }
 
-    /* Main Container */
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -209,10 +186,7 @@
       padding: 6rem 0;
     }
 
-    /* Hero */
-    .hero {
-      position: relative;
-    }
+    .hero { position: relative; }
 
     .badge {
       display: inline-block;
@@ -260,18 +234,10 @@
     }
 
     @keyframes blink {
-
-      0%,
-      100% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-      }
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
 
-    /* Buttons */
     .btn-group {
       display: flex;
       gap: 1rem;
@@ -316,7 +282,6 @@
       transform: translateY(-2px);
     }
 
-    /* Social Icons */
     .social-links {
       display: flex;
       gap: 1rem;
@@ -335,6 +300,7 @@
       color: var(--text-muted);
       font-size: 1.2rem;
       transition: all 0.3s ease;
+      text-decoration: none;
     }
 
     .social-links a:hover {
@@ -344,7 +310,6 @@
       transform: translateY(-3px);
     }
 
-    /* Section Headers */
     .section-title {
       font-size: 2.5rem;
       margin-bottom: 3rem;
@@ -360,7 +325,6 @@
       background: linear-gradient(to right, var(--glass-border), transparent);
     }
 
-    /* Glass Cards */
     .glass-card {
       background: var(--glass-bg);
       backdrop-filter: blur(16px);
@@ -376,7 +340,6 @@
       border-color: rgba(255, 255, 255, 0.15);
     }
 
-    /* About Section */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -418,7 +381,6 @@
       letter-spacing: 1px;
     }
 
-    /* Projects */
     .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -482,9 +444,7 @@
       transition: color 0.3s ease;
     }
 
-    .project-link:hover {
-      color: var(--accent-1);
-    }
+    .project-link:hover { color: var(--accent-1); }
 
     .project-link i {
       transition: transform 0.3s ease;
@@ -494,7 +454,6 @@
       transform: translateX(5px);
     }
 
-    /* Skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -546,7 +505,6 @@
       font-size: 1.1rem;
     }
 
-    /* Education */
     .edu-card {
       display: flex;
       justify-content: space-between;
@@ -581,7 +539,6 @@
       color: var(--accent-2);
     }
 
-    /* Contact */
     .contact-container {
       text-align: center;
       max-width: 800px;
@@ -620,7 +577,6 @@
       font-size: 1.5rem;
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 2rem;
@@ -630,7 +586,6 @@
       font-size: 0.9rem;
     }
 
-    /* Reveal Animation */
     .reveal {
       opacity: 0;
       transform: translateY(30px);
@@ -642,7 +597,6 @@
       transform: translateY(0);
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .about-grid {
         grid-template-columns: 1fr;
@@ -652,7 +606,6 @@
         display: none;
       }
 
-      /* Could add a hamburger menu, but keep it simple for now */
       .hero h1 {
         font-size: 2.5rem;
       }
@@ -660,21 +613,22 @@
       section {
         padding: 4rem 0;
       }
+
+      .contact-container h2 {
+        font-size: 2.2rem;
+      }
     }
   </style>
 </head>
 
 <body>
-  <!-- Custom Cursor -->
   <div class="cursor-dot"></div>
   <div class="cursor-outline"></div>
 
-  <!-- Background Elements -->
   <canvas id="bg-canvas"></canvas>
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
 
-  <!-- Navbar -->
   <nav id="navbar">
     <div class="nav-content">
       <a href="#" class="logo">Idrees.</a>
@@ -682,13 +636,13 @@
         <a href="#about">About</a>
         <a href="#work">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
 
   <div class="container">
-    <!-- HERO SECTION -->
     <section id="home" class="hero">
       <div class="reveal">
         <div class="badge">Open to Work</div>
@@ -699,32 +653,24 @@
           <a href="#work" class="btn btn-primary">
             View My Work <i class="fas fa-arrow-right"></i>
           </a>
-          <a href="#contact" class="btn btn-outline">
-            Contact Me
-          </a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
         </div>
 
         <div class="social-links">
-          <a href="https://github.com/m11idrees" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/b-mohammed-idrees-abdulla-b6a58a377" target="_blank"><i
-              class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/m11idrees" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/b-mohammed-idrees-abdulla-b6a58a377" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
           <a href="mailto:muhammed11idris@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section id="about">
       <h2 class="section-title reveal">About Me</h2>
       <div class="about-grid reveal">
         <div class="about-text">
-          <p>I’m a final-year BCA student with a profound passion for modern programming and scalable web technologies.
-            My journey in tech is driven by an insatiable curiosity and a desire to build elegant, high-performance
-            applications.</p>
-          <p>I am particularly excited about cloud computing and am actively seeking opportunities to architect robust
-            cloud-native solutions. I love transforming complex problems into simple, beautiful, and intuitive code.</p>
-          <p><i class="fas fa-map-marker-alt" style="color: var(--accent-1); margin-right: 8px;"></i> Based in
-            Karnataka, India</p>
+          <p>I am a final-year BCA student with a strong interest in programming and software development. My journey in technology is driven by curiosity and a desire to build efficient and user-friendly applications.</p>
+          <p>I am particularly interested in cloud computing and modern web technologies. I enjoy solving problems and developing simple, effective solutions through code.</p>
+          <p><i class="fas fa-map-marker-alt" style="color: var(--accent-1); margin-right: 8px;"></i> Based in Karnataka, India</p>
         </div>
         <div class="about-stats">
           <div class="stat glass-card">
@@ -739,7 +685,6 @@
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
     <section id="work">
       <h2 class="section-title reveal">Featured Projects</h2>
       <div class="project-grid">
@@ -747,36 +692,48 @@
           <div class="project-content">
             <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
             <h3>Weather Application</h3>
-            <p>A beautifully designed, responsive weather platform that delivers real-time forecasting using public
-              APIs. Built with a focus on UI/UX and dynamic data visualization.</p>
+            <p>A responsive weather application that fetches real-time weather data using a public API. It displays temperature, humidity, and wind speed based on the city entered by the user.</p>
             <div class="tags">
               <span class="tag">HTML5</span>
               <span class="tag">CSS3</span>
               <span class="tag">JavaScript</span>
               <span class="tag">REST API</span>
             </div>
-            <a href="https://github.com/m11idrees/weather-html" target="_blank" class="project-link">
+            <a href="https://github.com/m11idrees/weather-html" target="_blank" rel="noopener noreferrer" class="project-link">
               View Source <i class="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>
-        <!-- The cloud project has been removed as requested -->
+
+        <div class="project-card glass-card reveal" data-tilt>
+          <div class="project-content">
+            <div class="project-icon"><i class="fas fa-user-check"></i></div>
+            <h3>Face Recognition Attendance System</h3>
+            <p>A smart attendance system built with Python that captures live video, recognizes faces, marks attendance automatically, and sends email notifications. It also stores attendance records in Google Sheets.</p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Face Recognition</span>
+              <span class="tag">Google Sheets API</span>
+            </div>
+            <a href="YOUR_FACE_RECOGNITION_GITHUB_LINK" target="_blank" rel="noopener noreferrer" class="project-link">
+              View Source <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
     <section id="skills">
-      <h2 class="section-title reveal">Technical Arsenal</h2>
+      <h2 class="section-title reveal">Technical Skills</h2>
       <div class="skills-grid">
         <div class="skill-category glass-card reveal">
           <h3><i class="fas fa-code"></i> Languages</h3>
           <div class="skill-list">
             <div class="skill-item"><i class="si si-python"></i> Python</div>
             <div class="skill-item"><i class="si si-javascript"></i> JavaScript</div>
-            <div class="skill-item"><i class="si si-typescript"></i> TypeScript</div>
             <div class="skill-item"><i class="si si-c"></i> C / C++</div>
             <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
-            <!-- Added R programming (using si-r icon) -->
             <div class="skill-item"><i class="si si-r"></i> R programming</div>
           </div>
         </div>
@@ -786,25 +743,22 @@
           <div class="skill-list">
             <div class="skill-item"><i class="si si-html5"></i> HTML5</div>
             <div class="skill-item"><i class="si si-css3"></i> CSS3</div>
-            <!-- Removed React.js as requested -->
             <div class="skill-item"><i class="fas fa-plug"></i> REST API</div>
           </div>
         </div>
 
         <div class="skill-category glass-card reveal" style="transition-delay: 0.2s;">
-          <h3><i class="fas fa-cloud"></i> Cloud & Tools</h3>
+          <h3><i class="fas fa-tools"></i> Tools</h3>
           <div class="skill-list">
-            <div class="skill-item"><i class="si si-googlecloud"></i> GCP</div>
-            <div class="skill-item"><i class="si si-linux"></i> Linux</div>
             <div class="skill-item"><i class="si si-git"></i> Git</div>
             <div class="skill-item"><i class="si si-github"></i> GitHub</div>
+            <div class="skill-item"><i class="si si-linux"></i> Linux</div>
             <div class="skill-item"><i class="si si-firebase"></i> Firebase</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EDUCATION SECTION -->
     <section id="education">
       <h2 class="section-title reveal">Education</h2>
       <div class="edu-card glass-card reveal">
@@ -819,14 +773,11 @@
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
     <section id="contact">
       <div class="contact-container reveal">
-        <h2>Let's build something amazing</h2>
-        <p>I'm currently seeking internships and entry-level cloud roles. My inbox is always open for new opportunities
-          or just to say hi!</p>
-        <a href="mailto:muhammed11idris@gmail.com" class="btn btn-primary"
-          style="padding: 1.2rem 3rem; font-size: 1.1rem;">
+        <h2>Let's Build Something Amazing</h2>
+        <p>I am currently seeking internships and entry-level roles in software development and IT. My inbox is open for new opportunities.</p>
+        <a href="mailto:muhammed11idris@gmail.com" class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 1.1rem;">
           <i class="fas fa-paper-plane"></i> Get In Touch
         </a>
 
@@ -843,12 +794,10 @@
   </div>
 
   <footer>
-    <p>© 2026 B Mohammed Idrees Abdulla. Engineered with passion and Antigravity.</p>
+    <p>© 2026 B Mohammed Idrees Abdulla. Built with passion.</p>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // Custom Cursor
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorOutline = document.querySelector('.cursor-outline');
 
@@ -859,14 +808,12 @@
       cursorDot.style.left = `${posX}px`;
       cursorDot.style.top = `${posY}px`;
 
-      // Add slight delay for outline
       cursorOutline.animate({
         left: `${posX}px`,
         top: `${posY}px`
       }, { duration: 500, fill: "forwards" });
     });
 
-    // Cursor hover effect on interactive elements
     const interactables = document.querySelectorAll('a, button, .project-card');
     interactables.forEach(el => {
       el.addEventListener('mouseenter', () => {
@@ -881,7 +828,6 @@
       });
     });
 
-    // Sticky Navbar
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -891,20 +837,16 @@
       }
     });
 
-    // Reveal on Scroll
     const revealElements = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('active');
       });
     }, { threshold: 0.1 });
 
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // Typewriter Effect
-    const phrases = ["Final-year BCA Student.", "Aspiring Cloud Engineer.", "Creative Developer."];
+    const phrases = ["Final-year BCA Student", "Aspiring Software Developer", "Python Enthusiast"];
     let currentPhrase = 0;
     let isDeleting = false;
     let text = '';
@@ -925,19 +867,18 @@
       if (isDeleting) typingSpeed /= 2;
 
       if (!isDeleting && text === fullTxt) {
-        typingSpeed = 2000; // Pause at end
+        typingSpeed = 2000;
         isDeleting = true;
       } else if (isDeleting && text === '') {
         isDeleting = false;
         currentPhrase = (currentPhrase + 1) % phrases.length;
-        typingSpeed = 500; // Pause before new word
+        typingSpeed = 500;
       }
 
       setTimeout(type, typingSpeed);
     }
     document.addEventListener('DOMContentLoaded', type);
 
-    // Subtle Particle Background
     const canvas = document.getElementById('bg-canvas');
     const ctx = canvas.getContext('2d');
     let width, height, particles;
@@ -965,6 +906,7 @@
       particles.forEach(p => {
         p.x += p.dx;
         p.y += p.dy;
+
         if (p.x < 0 || p.x > width) p.dx *= -1;
         if (p.y < 0 || p.y > height) p.dy *= -1;
 
@@ -979,7 +921,6 @@
     initCanvas();
     animateCanvas();
 
-    // 3D Tilt Effect for cards
     const tiltElements = document.querySelectorAll('[data-tilt]');
     tiltElements.forEach(el => {
       el.addEventListener('mousemove', (e) => {
@@ -993,11 +934,11 @@
 
         el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
       });
+
       el.addEventListener('mouseleave', () => {
         el.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
       });
     });
   </script>
 </body>
-
 </html>
