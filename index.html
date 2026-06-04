@@ -14,14 +14,14 @@
 
   <style>
     :root {
-      --bg-color: #050a15;
-      --text-main: #ffffff;
-      --text-muted: #94a3b8;
-      --accent-1: #3b82f6;
-      --accent-2: #8b5cf6;
-      --glass-bg: rgba(255, 255, 255, 0.03);
-      --glass-border: rgba(255, 255, 255, 0.08);
-      --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+      --bg-color: #f8fafc;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --accent-1: #2563eb;
+      --accent-2: #7c3aed;
+      --glass-bg: rgba(255, 255, 255, 0.8);
+      --glass-border: rgba(0, 0, 0, 0.08);
+      --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
     }
 
     * {
@@ -119,7 +119,7 @@
 
     nav.scrolled {
       padding: 1rem 2rem;
-      background: rgba(5, 10, 21, 0.8);
+      background: rgba(248, 250, 252, 0.8);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--glass-border);
     }
@@ -137,7 +137,7 @@
       font-size: 1.5rem;
       font-weight: 800;
       text-decoration: none;
-      color: white;
+      color: var(--text-main);
       background: linear-gradient(to right, var(--accent-1), var(--accent-2));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -157,7 +157,7 @@
       position: relative;
     }
 
-    .nav-links a:hover { color: white; }
+    .nav-links a:hover { color: var(--text-main); }
 
     .nav-links a::after {
       content: '';
@@ -210,7 +210,7 @@
     }
 
     .text-gradient {
-      background: linear-gradient(to right, #fff, #94a3b8);
+      background: linear-gradient(to right, var(--text-main), var(--text-muted));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -271,14 +271,14 @@
 
     .btn-outline {
       background: transparent;
-      color: white;
+      color: var(--text-main);
       border: 1px solid var(--glass-border);
       backdrop-filter: blur(10px);
     }
 
     .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(0, 0, 0, 0.05);
+      border-color: var(--text-main);
       transform: translateY(-2px);
     }
 
@@ -304,8 +304,8 @@
     }
 
     .social-links a:hover {
-      color: white;
-      background: rgba(59, 130, 246, 0.2);
+      color: var(--accent-1);
+      background: rgba(37, 99, 235, 0.1);
       border-color: var(--accent-1);
       transform: translateY(-3px);
     }
@@ -337,7 +337,7 @@
     }
 
     .glass-card:hover {
-      border-color: rgba(255, 255, 255, 0.15);
+      border-color: rgba(0, 0, 0, 0.15);
     }
 
     .about-grid {
@@ -429,15 +429,15 @@
       font-size: 0.75rem;
       padding: 0.4rem 1rem;
       border-radius: 50px;
-      background: rgba(255, 255, 255, 0.05);
-      color: #cbd5e1;
+      background: rgba(0, 0, 0, 0.05);
+      color: var(--text-muted);
     }
 
     .project-link {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: white;
+      color: var(--text-main);
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 600;
@@ -488,7 +488,7 @@
       gap: 0.5rem;
       padding: 0.5rem 1rem;
       border-radius: 12px;
-      background: rgba(255, 255, 255, 0.03);
+      background: var(--glass-bg);
       border: 1px solid var(--glass-border);
       font-size: 0.9rem;
       transition: all 0.3s ease;
@@ -718,6 +718,23 @@
             </div>
             <a href="YOUR_FACE_RECOGNITION_GITHUB_LINK" target="_blank" rel="noopener noreferrer" class="project-link">
               View Source <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal" data-tilt>
+          <div class="project-content">
+            <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+            <h3>Tiki Taka Toe</h3>
+            <p>An interactive, football-themed Tic-Tac-Toe game supporting both pass-and-play and online multiplayer modes. Built with web technologies and features real-time gameplay integration via Firebase.</p>
+            <div class="tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Firebase</span>
+            </div>
+            <a href="index.html" target="_blank" rel="noopener noreferrer" class="project-link">
+              View Project <i class="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>
